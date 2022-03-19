@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: activemq-service
+spec:
+  selector:
+    name: activemq
+  ports:
+  - name: http
+    port: 8161
+    nodePort: 30010
+
+  type: NodePort
+
+  
