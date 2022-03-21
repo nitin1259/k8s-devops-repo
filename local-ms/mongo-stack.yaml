@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: mongodb
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: mongodb
@@ -13,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: mongo:3.6.5-jessie
+        image: mongo:5.0.6
         resources:
           limits:
             memory: "128Mi"
